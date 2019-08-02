@@ -95,7 +95,7 @@ resource "aws_lb_target_group" "default" {
   port                 = var.target_group_port
   protocol             = "HTTP"
   vpc_id               = var.vpc_id
-  target_type          = "ip"
+  target_type          = "instance"
   deregistration_delay = var.deregistration_delay
 
   health_check {
